@@ -20,8 +20,9 @@ public class ChangeFloorScript : MonoBehaviour
         msg = GameObject.FindGameObjectWithTag("Message").GetComponent<Messages>();
         ChangeFloor();
     }
+    //function that changes the current floor upon request
     public void ChangeFloor(){
-        ClearList();
+        ClearList(); 
         switch(dropObject.value){
             case 0: 
                 ind.TargetHolder = f1Target;
@@ -43,6 +44,7 @@ public class ChangeFloorScript : MonoBehaviour
         }
         StartCoroutine(msg.DisplayTextForSecond(msg.warnText, 2));
     }
+    //clear the search list buttons
     private void ClearList(){
         for(int i=0; i<ind.totalTargets; i++){
             Destroy(ind.ButtonParent.transform.GetChild(i).gameObject);
