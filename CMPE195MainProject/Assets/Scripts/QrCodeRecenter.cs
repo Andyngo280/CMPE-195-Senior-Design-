@@ -7,7 +7,6 @@ using ZXing;
 
 public class QrCodeRecenter : MonoBehaviour
 {
-
     [SerializeField]
     private ARSession session;
     [SerializeField]
@@ -56,7 +55,6 @@ public class QrCodeRecenter : MonoBehaviour
             // Get the entire image.
             inputRect = new RectInt(0, 0, image.width, image.height),
 
-            // Downsample by 2.
             outputDimensions = new Vector2Int(image.width / 2, image.height / 2),
 
             // Choose RGBA format.
@@ -66,15 +64,15 @@ public class QrCodeRecenter : MonoBehaviour
             transformation = XRCpuImage.Transformation.MirrorY
         };
 
-        // Bytes for final image
+        // Total Bytes For final image
         int size = image.GetConvertedDataSize(conversionParams);
 
-        // Allocate a buffer to store the image.
+        // Creater to store the image.
         var buffer = new NativeArray<byte>(size, Allocator.Temp);
 
-        // Extract the image data
+        // Convert the image data from buffer
         image.Convert(conversionParams, buffer);
-
+        
         image.Dispose();
 
         cameraImageTexture = new Texture2D(
@@ -88,10 +86,9 @@ public class QrCodeRecenter : MonoBehaviour
 
         buffer.Dispose();
 
-        // Detect and decode the barcode 
+        // Checks to decode the barcode 
         var result = reader.Decode(cameraImageTexture.GetPixels32(), cameraImageTexture.width, cameraImageTexture.height);
 
-        // Do something with the result
         if (result != null)
         {
             SetQrCodeRecenterTarget(result.Text);

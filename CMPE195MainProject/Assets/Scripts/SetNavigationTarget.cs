@@ -8,11 +8,6 @@ using UnityEngine.EventSystems;
 
 public class SetNavigationTarget : MonoBehaviour
 {
-    // [SerializeField]
-    // private TMP_Dropdown navigationTargetDropDown;
-    //[SerializeField]
-    //private List<Target> navigationTargetObject = new List<Target>(); 
-
     public GameObject ButtonPrefab;
     public GameObject ButtonParent; 
 
