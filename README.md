@@ -15,8 +15,8 @@ Link for Xcode 14: https://developer.apple.com/xcode/
 # For iOS System
 You need a mac OS device with Xcode installed in order to install it onto iOS devices.
 
-## 1. Launch Unity
-Launch Unity
+## 1. Launch Unity and open project
+Launch Unity Hub. Cllick the "Open" on the top right corner next to "New Project", navigate to where you downloaded the zip folder, unzip and open the folder, choose the directory named "CMPE195MainProject". After a while, the project should be imported.
 
 ## 2. Change build setting
 Navigate to File >> Build Settings...
@@ -40,8 +40,8 @@ The app should be installed automatically
 # For Android System
 You can use both Windows system or Mac OS system, we are not sure about Linux systems.
 
-## 1. Launch Unity
-Launch Unity
+## 1. Launch Unity and open project
+Launch Unity Hub. Cllick the "Open" on the top right corner next to "New Project", navigate to where you downloaded the zip folder, unzip and open the folder, choose the directory named "CMPE195MainProject". After a while, the project should be imported.
 
 ## 2. Change build settings
 Navigate to File >> Build Settings...
