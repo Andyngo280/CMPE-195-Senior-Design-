@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
+//target cube object 
 [Serializable]
 public class Target
 {

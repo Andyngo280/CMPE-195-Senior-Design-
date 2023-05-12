@@ -79,7 +79,7 @@ public class SetNavigationTarget : MonoBehaviour
 
     private void OnEnable(){
     }
-
+    //extract the name of button that sends the signal and set it as the destination
     public void SetTargetFromSearch(){
         string roomName = EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TextMeshProUGUI>().text;
         Target currentTarget = Targets.Find(x => x.Name.Equals(roomName));
@@ -96,6 +96,7 @@ public class SetNavigationTarget : MonoBehaviour
     public void FindBathroom(){
         SetClosestObject(BathroomHolder);
     }
+    //compares paths to all same kind of object and set the closest one as target
     public void SetClosestObject(GameObject holder){
         NavMeshPath tempPath = new NavMeshPath();
         float shortLen=float.MaxValue;
@@ -112,7 +113,7 @@ public class SetNavigationTarget : MonoBehaviour
         if(closestObject!=null)
             targetPosition = closestObject.gameObject.transform.position;
     }
-
+    //calculate the length of a path
     public static float GetPathLength( NavMeshPath path )
     {
         float len = 0.0f;
@@ -126,6 +127,7 @@ public class SetNavigationTarget : MonoBehaviour
         else return float.MaxValue;
         return len;
     }
+    //toggle the path line visibility
     public void ToggleVisibility()
     {
         lineToggle = !lineToggle;

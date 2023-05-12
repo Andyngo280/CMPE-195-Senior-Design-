@@ -10,7 +10,7 @@ public class SearchScript : MonoBehaviour
     {
 
     }
-
+    //upon requested, search the list and filter out button items that contains the text
     public void Search()
     {
         //text input in search box

@@ -21,12 +21,12 @@ public class QrCodeRecenter : MonoBehaviour
     private IBarcodeReader reader = new BarcodeReader(); // create an object for barcode reader 
     Messages msg;
 
-    private bool scanOn=false;
+    private bool scanOn=false; //indicates if it is scanning
 
     private void Update()
     {
         msg = GameObject.FindGameObjectWithTag("Message").GetComponent<Messages>();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) //for pc testing
         {
             SetQrCodeRecenterTarget("Project Room");
         }
@@ -40,7 +40,7 @@ public class QrCodeRecenter : MonoBehaviour
     {
         cameraManager.frameReceived -= OnCameraFrameReceived;
     }
-
+    //activate for each frame
     private void OnCameraFrameReceived(ARCameraFrameEventArgs eventArgs)
     {
 
@@ -106,6 +106,7 @@ public class QrCodeRecenter : MonoBehaviour
         msg.scaningText.SetActive(scanOn);
         msg.instrText.SetActive(false);
     }
+    //with qrcode being decoded, the session origin is moved to the new location
     public void SetQrCodeRecenterTarget(string targetText)
     {
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.ToLower().Equals(targetText.ToLower()));

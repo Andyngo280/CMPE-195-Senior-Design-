@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Messages : MonoBehaviour
 {
-    public GameObject instrText;
-    public GameObject warnText;
-    public GameObject scaningText;
-    public GameObject scanDoneText;
+    public GameObject instrText;    //scan code instruction
+    public GameObject warnText;     //warning message
+    public GameObject scaningText;  //scanning
+    public GameObject scanDoneText; //scan complete
  
     // Start is called before the first frame update
     void Start()
     {
+        //disable everything except the scan code instruction
         instrText.SetActive(true);
         scaningText.SetActive(false);
         scanDoneText.SetActive(false);
         warnText.SetActive(false);
     }
+    //function that displays certain text object for certain amount of time
     public IEnumerator DisplayTextForSecond(GameObject txtObj, int time){
         txtObj.SetActive(true);
         yield return new WaitForSeconds(time);
