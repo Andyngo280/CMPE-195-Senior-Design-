@@ -6,7 +6,7 @@ public class Messages : MonoBehaviour
 {
     public GameObject instrText;    //scan code instruction
     public GameObject warnText;     //warning message
-    public GameObject scaningText;  //scanning
+    public GameObject scanningText;  //scanning
     public GameObject scanDoneText; //scan complete
  
     // Start is called before the first frame update
