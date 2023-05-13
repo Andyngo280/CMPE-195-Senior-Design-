@@ -31,11 +31,11 @@ In settings, navigate to "Privacy & Security", at the bottom of the page, turn o
 
 ## 5. Xcode settings
 <strong>You will only need to set up the signing settings once. Once the signing setting is set up, you can just select your IOS device and run it. </strong>.
-<p> After the project is built, an Xcode project file is generated and should be opened automatically.
-Click on the Unity-IPhone tab on the left-hand side. Click on the "Signing & Capabilities" tab and enable the "Automatic manage signing" option. <br />
+<p> After the project is built, an Xcode project file is generated and should be opened automatically. <br />
+Click on the Unity-IPhone tab on the left-hand side. Click on the "Signing & Capabilities" tab and enable the "Automatic manage signing" option. 
 Click on the option where that says team and click on "Add an Account". Sign in with your Apple ID account. After that, click on "Manage Certificates" and click on the "+" option for 
 Apple Development. <br />
-On the top menu, choose the build target to be the device you connected with so it will install the app to your connected device. <br />
+On the top menu, choose the build target to be the device you connected with so it will install the app to your connected device. 
 If there are any warnings or errors, you will likely need to look it up online to fix it. </p>
 
 ## 6. Trust Mode
